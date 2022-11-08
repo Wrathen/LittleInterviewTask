@@ -15,3 +15,9 @@ Interview Task for Team LSW
 
 - **[03:14am 08/11/2022]** After 1.5 months I'm returning back to the task. No code was done in this repo, so I decided to continue on this one. All it has is some set-up, environment design (world design), packages, assets etc...
 - **[05:51am 08/11/2022]** I had recently re-installed Win10, thus a lot of setups were required. Took some time to get WinSDK's, VSCode Intellisense working. Implemented some basic Player, PlayerMovement, PlayerAnimation Scripts. Next step seems like getting some NPC's, Enemies done. There are collision checks right now but there are flaws. Will polish it later. Planning to do Interactables/chests on the world. I could implement chopping trees as a feature but I need assets :( I wish I had unlimited access to every asset I needed instantly, would make everything so much easier.
+
+
+
+<h4>Version 1 [05:51am 08/11/2022]<h4>
+https://user-images.githubusercontent.com/36766122/200465111-0dbd0695-d55d-4f5d-b0ee-0703ba67e6d0.mp4
+
