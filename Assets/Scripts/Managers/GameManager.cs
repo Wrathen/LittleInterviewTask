@@ -1,11 +1,21 @@
 using UnityEngine;
 
 public class GameManager : MonoBehaviour {
+    public static int money = 0;
     private static GameManager i;
     private GameObject player;
     private Camera mainCam; // Cache it, 'cause Unity doesn't
 
+    // Base Functions
     void Awake() { i = this; }
+
+    // Main Functions
+    public static void AddMoney(int amount) {
+        money += amount;
+        UIManager.UpdateCoinText(money);
+    }
+
+    // Utility Functions
     public static GameObject GetPlayer() {
         if (!i.player) i.player = GameObject.Find("Player");
         return i.player;
