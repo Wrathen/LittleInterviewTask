@@ -11,6 +11,6 @@ Interview Task for Team LSW
 - **[03:56am 24/09/2022]** Imported a lot of free assets from Unity Store. I know I won't be using many of them, but, I want to be able to pick from various amount of assets when I'm choosing some image/visuals for anything I'm doing.
 - **[05:04am 24/09/2022]** Some basic level design with environment is done.
 
-
+<br>
 
 - **[03:14am 08/11/2022]** After 1.5 months I'm returning back to the task. No code was done in this repo, so I decided to continue on this one. All it has is some set-up, environment design (world design), packages, assets etc...
