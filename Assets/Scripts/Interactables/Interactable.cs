@@ -9,13 +9,13 @@ public class Interactable : MonoBehaviour {
     public UnityEvent OnTriggerExitEvents;
 
     void OnTriggerEnter2D(Collider2D other) {
-        if (!IsAbleToTrigger()) return;
         if (!other.CompareTag(targetTag)) return;
+        if (!IsAbleToTrigger()) return;
         OnTriggerEnterEvents.Invoke();
     }
     void OnTriggerExit2D(Collider2D other) {
-        if (!IsAbleToTrigger()) return;
         if (!other.CompareTag(targetTag)) return;
+        if (!IsAbleToTrigger()) return;
         OnTriggerExitEvents.Invoke();
     }
 

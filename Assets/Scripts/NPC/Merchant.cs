@@ -21,12 +21,14 @@ public class Merchant : MonoBehaviour {
         HideNearbyUI();
         isShopOpen = true;
         shopPanel.SetActive(true);
+        GlobalStats.canShoot = false;
         PlayerMovement.SetActive(false);
     }
     public void HideShopUI() {
         ShowNearbyUI();
         isShopOpen = false;
         shopPanel.SetActive(false);
+        GlobalStats.canShoot = true;
         PlayerMovement.SetActive(true);
     }
 

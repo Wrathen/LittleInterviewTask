@@ -24,7 +24,7 @@ public class PlayerMovement : MonoBehaviour {
         inputVec /= inputVec.magnitude + 0.00001f; // Avoid dividing by 0 by adding epsilon
 
         // Calculate & Update Velocities
-        velocity = inputVec * speed;
+        velocity = inputVec * speed * GlobalStats.moveSpeedModifier;
         rb.velocity = velocity;
     }
 

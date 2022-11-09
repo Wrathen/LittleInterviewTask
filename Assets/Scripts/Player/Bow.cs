@@ -13,6 +13,7 @@ public class Bow : MonoBehaviour {
     private Vector3 mousePos;
     private Vector3 screenPos;
 
+    // Base Functions
     void Update() {
         mousePos = Input.mousePosition;
         screenPos = GameManager.GetCamera().WorldToScreenPoint(anchorPoint.position);
@@ -21,12 +22,13 @@ public class Bow : MonoBehaviour {
         RotateAroundAnchor();
         LookAtMouse();
         
-        if (Input.GetMouseButton(0)) Shoot();
+        if (GlobalStats.canShoot && Input.GetMouseButton(0)) Shoot();
     }
 
+    // Main Functions
     void Shoot() {
         if (nextAttackTime > Time.time) return;
-        nextAttackTime = Time.time + attackSpeed;
+        nextAttackTime = Time.time + GetAttackSpeed();
         Instantiate(arrowPrefab, transform.position, transform.rotation);
     }
     void RotateAroundAnchor() {
@@ -37,5 +39,10 @@ public class Bow : MonoBehaviour {
         transform.localEulerAngles = new Vector3(transform.localEulerAngles.x,            
             transform.localEulerAngles.y, 
             angleBetweenMouse * Mathf.Rad2Deg + offsetRotation);
+    }
+
+    // Utility Functions
+    float GetAttackSpeed() {
+        return attackSpeed / GlobalStats.attackSpeedModifier;
     }
 }

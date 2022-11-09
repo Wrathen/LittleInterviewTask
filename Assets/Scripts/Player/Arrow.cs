@@ -18,7 +18,7 @@ public class Arrow : MonoBehaviour {
         }
 
         angle = (transform.eulerAngles.z + angleOffset) * Mathf.Deg2Rad;
-        transform.position += new Vector3(Mathf.Cos(angle), Mathf.Sin(angle), 0) * speed * Time.deltaTime;
+        transform.position += new Vector3(Mathf.Cos(angle), Mathf.Sin(angle), 0) * speed * GlobalStats.projectileSpeedModifier * Time.deltaTime;
     }
 
     void OnTriggerEnter2D(Collider2D col) {

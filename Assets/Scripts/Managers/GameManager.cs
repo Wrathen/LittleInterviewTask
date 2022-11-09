@@ -1,8 +1,11 @@
 using UnityEngine;
 
 public class GameManager : MonoBehaviour {
-    public static int money = 0;
     private static GameManager i;
+
+    public static int money = 0;
+    public static bool canTeleport = false;
+    
     private GameObject player;
     private Camera mainCam; // Cache it, 'cause Unity doesn't
 
