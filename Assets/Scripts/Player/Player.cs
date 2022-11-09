@@ -10,9 +10,25 @@ public class Player : MonoBehaviour {
     public float maxHP = 100f;
     public float hpRegen = 0.3f;
 
+    private Vector3 startZone;
+
     // Base Functions
-    void Start() { GameManager.GetCamera().GetComponent<FollowTarget>()?.SetTarget(transform); }
-    void Update() { RegenerateHealth(); }
+    void Start() {
+        GameManager.GetCamera().GetComponent<FollowTarget>()?.SetTarget(transform);
+        startZone = transform.position;
+    }
+    void Update() {
+        // Teleport Skill
+        if (GlobalStats.canTeleport &&
+            Time.time > GlobalStats.nextTeleportTime &&
+            Input.GetKeyDown(KeyCode.Space)) {
+                transform.position = startZone;
+                GlobalStats.nextTeleportTime = Time.time + GlobalStats.teleportCooldown;
+            }
+
+        // Regen
+        RegenerateHealth();
+    }
 
     // Main Functions
     public void Die() { Application.Quit(0); }
@@ -23,11 +39,5 @@ public class Player : MonoBehaviour {
     void RegenerateHealth() {
         if (hp < maxHP) hp += hpRegen * Time.deltaTime;
         if (hp > maxHP) hp = maxHP;
-    }
-
-    // Events
-    public void OnCharacterSizeChanged() {
-        transform.localScale = new Vector3(transform.localScale.x * GlobalStats.characterSizeModifier,
-            transform.localScale.y * GlobalStats.characterSizeModifier, transform.localScale.z);
     }
 }
