@@ -1,18 +1,13 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemy : MonoBehaviour
-{
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+public class Enemy : MonoBehaviour {
+    public GameObject loot_coin;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+    // Let's just kill them instantly.
+    public void TakeDamage() {
+        Instantiate(loot_coin, transform.position, Quaternion.identity);
+
+        DynamicEnemySpawn.OnEnemyDeath(); // Notify the spawner, so we spawn more
+        Destroy(gameObject);
     }
 }

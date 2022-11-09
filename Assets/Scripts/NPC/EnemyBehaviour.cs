@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
@@ -14,12 +12,13 @@ public class EnemyBehaviour : MonoBehaviour {
     public float attackSpeed = 0.17f;
     private float nextAttackTime = 0;
 
-    public float distanceToTarget = 0f;
-    public float distanceToSpawn = 0f;
+    private float distanceToTarget = 0f;
+    private float distanceToSpawn = 0f;
 
-    public bool isAttacking = false; // public for debugging
-    public bool isChasing = false; // public for debugging
-    public bool isEvading = false; // public for debugging
+    [HideInInspector]
+    public bool isAttacking = false;
+    private bool isChasing = false;
+    private bool isEvading = false;
 
     private Rigidbody2D rb;
     private Transform target;

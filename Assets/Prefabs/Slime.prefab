@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 8358712354505514696}
   m_Layer: 0
   m_Name: Slime
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -159,6 +159,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d562d80819822d64b84c2db7afdc7d98, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  loot_coin: {fileID: 1362613824590205267, guid: 4161b29b351f7b34a9a14501b44e8412, type: 3}
 --- !u!114 &8358712354505514711
 MonoBehaviour:
   m_ObjectHideFlags: 0
