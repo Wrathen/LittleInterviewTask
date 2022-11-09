@@ -19,6 +19,7 @@ Interview Task for Team LSW
 - **[01:34am 09/11/2022]** Recorded V3 video showcasing Dynamic NPC Spawner with preset spawn zones, NPC state machines (Attacking, Evading, Chasing), animations. There's also HP&Damage in the background but, I'm not aiming to finalize those. Things left are: Player attacking, Interactable Chest, Interactable Coin, Inventory/Equipment, Shop UI backend... 
 - **[05:02am 09/11/2022]** Not much left to do. I looked up for the visuals on the equipments but couldn't find any good fits in the project's assets. Just downloaded GIMP and will try my best art skills. Also uploaded a combat showcase video below.
 - **[06:36am 09/11/2022]** Had some fun drawing equipments for the player. That was 4 equipment slots (Helmet, Gloves, Pants, Shoes), 1x variant/color, animated (4x each direction, up, down, left, right). Each slot is individual. Check Version 5 video for a showcase. Using Cheatcodes (Alpha2-3-4-5 to show/hide).
+- **[10:08am 09/11/2022]** Finalized everything. There is, item buying, selling, equipping equipment, visual equipments, unequipping, enemies, merchant, interactions with chests, coins, collisions, player shooting, animations all over the place. There are much more could be done, i.e: sounds, swimming, much more items, there are thrown-away ideas in the process. Every UI is hand-made. It took a lot of time. GGs!...
 
 <h4>Version 1 - First Steps [05:51am 08/11/2022]<h4>
 
